@@ -3,28 +3,50 @@
     public class Retweet
     {
         private Guid _id;
-        private Guid _tweetId;
         private Guid _userId;
-        private DateTime _retweetedAt;
+        private Guid _tweetId;
+        private string _comment;
+        private DateTime _createdAt;
+        private DateTime _modifiedAt;
+
+        public Retweet()
+        {
+            _id = Guid.NewGuid();
+            _createdAt = DateTime.UtcNow;
+        }
 
         public Guid Id
         {
             get { return _id; }
         }
 
-        public Guid TweetId
-        {
-            get { return _tweetId; }
-        }
-
         public Guid UserId
         {
             get { return _userId; }
+            set { _userId = value; }
         }
 
-        public DateTime RetweetedAt
+        public Guid TweetId
         {
-            get { return _retweetedAt; }
+            get { return _tweetId; }
+            set { _tweetId = value; }
+        }
+
+        public string Comment
+        {
+            get { return _comment; }
+            set { _comment = value; }
+        }
+
+        public DateTime CreatedAt
+        {
+            get { return _createdAt; }
+        }
+
+        public DateTime ModifiedAt
+        {
+            get { return _modifiedAt; }
+            set { _modifiedAt = value; }
         }
     }
 }
