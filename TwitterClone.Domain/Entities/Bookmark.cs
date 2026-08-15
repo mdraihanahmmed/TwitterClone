@@ -3,9 +3,7 @@
     public class Bookmark : BaseEntity
     {
  
-        private Guid _userId;
-        private Guid _tweetId;
-       
+     
 
         public Bookmark() : base(Guid.NewGuid())
         {
