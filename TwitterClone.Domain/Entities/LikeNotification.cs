@@ -8,14 +8,19 @@ namespace TwitterClone.Domain.Entities
     {
         public LikeNotification (Guid likbyUserId) : base("Like")
         {
-            likbyUserId = likbyUserId;
+            LikeByUserId = likbyUserId;
         }
-        public string LikeByUserId { get; set; }
+        public Guid LikeByUserId { get; set; }
 
         public string notificationMessage (string message)
         {
             Message = message;
             return $"Dear User : {Message}";
+        }
+
+        public override string GetMessage()
+        {
+            return $"you got a like: {Message}";
         }
     }
 }
