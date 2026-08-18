@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TwitterClone.Domain.Entities
 {
-    internal class FriendRequestNotification : Notification
+    public class FriendRequestNotification : Notification
 
     {
         public FriendRequestNotification (Guid friendRequest) : base("Friend Request")
